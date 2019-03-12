@@ -2,6 +2,7 @@
 **iptables DNAT 설정 스크립트입니다.**
 
 [https://github.com/copyrat90/iptables\_DNAT\_Scripts](https://github.com/copyrat90/iptables_DNAT_Scripts)
+[구글 문서 버전 README (색깔 포함)](https://docs.google.com/document/d/1iPk9w6vlIB1J6ds4v7GZunssvk7mTDt-SReyTgVdjqw/edit?usp=sharing)
 
 **Q. 이 스크립트는 어떤 역할을 하나요?**
 
