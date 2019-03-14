@@ -51,8 +51,12 @@ ____HERE
         echo -n "설정을 하시려면 A, 지우시려면 D 를 입력하세요 : "
         read option
     done
+    
+    echo ""
     echo "외부 포트 앞자리를 입력하세요."
     echo "예를 들어 19 를 입력하면 19xxx 가 사용됩니다."
+
+    echo ""
     echo -n "SSH 외부 포트 앞자리 (기본값 ${ssh_public_port_prefix}) : "; read user_input
     if [[ -z $user_input ]]; then
         echo "기본값 ${ssh_public_port_prefix} 을 사용합니다."
@@ -60,15 +64,17 @@ ____HERE
         ssh_public_port_prefix=$user_input
     fi
     
-    echo -n "HTTP 외부 포트 앞자리 (기본값 ${http_public_port_prefix}): "; read user_input
+    echo -n "HTTP 외부 포트 앞자리 (기본값 ${http_public_port_prefix}) : "; read user_input
     if [[ -z $user_input ]]; then
         echo "기본값 ${http_public_port_prefix} 을 사용합니다."
     else
         http_public_port_prefix=$user_input
     fi
 
+    echo ""
     echo "내부 포트를 입력하세요."
     echo "이건 포트 번호 전체를 입력해야 합니다. (예: 80)"
+    echo ""
     echo -n "SSH 내부 포트 (기본값 ${ssh_inner_port}) : "; read user_input
 
     if [[ -z $user_input ]]; then
@@ -85,6 +91,7 @@ ____HERE
         http_inner_port=$user_input
     fi
 
+    echo ""
 # EOF로 호출하면 내부 변수 참조 불가.
 # ____HERE로 호출하면 외부 변수 참조 불가.
 # 대체 어쩌라는... 매개 변수로 넘기자.
